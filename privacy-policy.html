@@ -9,26 +9,40 @@
   @media (prefers-color-scheme: dark) {
     :root { --bg: #121214; --fg: #ececf1; --muted: #a0a0aa; --rule: #2c2c31; --link: #8ab4ff; }
   }
-  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Devanagari", "Noto Sans Arabic", "Noto Sans CJK SC", sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
   h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 4px; }
   h2 { font-size: 1.15rem; margin: 32px 0 8px; }
   p, li { margin: 0 0 10px; }
   ul { padding-inline-start: 22px; }
   .meta { color: var(--muted); margin-bottom: 24px; }
-  nav a { margin-inline-end: 16px; }
+  nav { display: flex; flex-wrap: wrap; gap: 6px 16px; }
   a { color: var(--link); }
   hr { border: 0; border-top: 1px solid var(--rule); margin: 48px 0; }
+  section { scroll-margin-top: 16px; }
 </style>
 </head>
 <body>
 <main>
 
-<nav><a href="#ru">Русский</a><a href="#en">English</a></nav>
+<nav aria-label="Language">
+  <a href="#ru" hreflang="ru">Русский</a>
+  <a href="#en" hreflang="en">English</a>
+  <a href="#de" hreflang="de">Deutsch</a>
+  <a href="#es" hreflang="es">Español</a>
+  <a href="#fr" hreflang="fr">Français</a>
+  <a href="#pt" hreflang="pt">Português</a>
+  <a href="#hi" hreflang="hi">हिन्दी</a>
+  <a href="#ja" hreflang="ja">日本語</a>
+  <a href="#zh" hreflang="zh">中文</a>
+  <a href="#ar" hreflang="ar">العربية</a>
+</nav>
+
+<hr>
 
 <section id="ru" lang="ru">
 <h1>Политика конфиденциальности приложения «RPG Ежедневник»</h1>
-<p class="meta">Действует с 20 октября 2026 г.</p>
+<p class="meta">Действует с 28 октября 2026 г.</p>
 
 <p>Эта политика описывает, какие данные использует мобильное приложение «RPG Ежедневник» (далее — «приложение») для Android. Вопросы по ней можно отправить на <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a>.</p>
 
@@ -40,7 +54,8 @@
 </ul>
 
 <h2>Данные, которые хранятся на устройстве</h2>
-<p>Ваш прогресс — герои, задания, история выполнения, привычки, заметки, статистика таймера Pomodoro и настройки — хранится в памяти приложения на устройстве. Разработчик не имеет к ним доступа. Эти данные удаляются при удалении приложения или сбросе героя.</p>
+<p>Ваш прогресс — герои, задания, история выполнения, привычки, заметки, статистика таймера Pomodoro и дыхательных сессий, настройки — хранится в памяти приложения на устройстве. Разработчик не имеет к ним доступа. Эти данные удаляются при удалении приложения или сбросе героя.</p>
+<p>Виджеты на главном экране показывают ваши задания и привычки; для этого приложение передаёт их виджетам на том же устройстве, никуда за его пределы.</p>
 <p>Если вы сами воспользуетесь функцией «Сохранить» в разделе резервной копии, приложение создаст файл с вашим прогрессом. Куда его отправить или сохранить, решаете вы; приложение этот файл никуда не передаёт.</p>
 
 <h2>Реклама (Google AdMob)</h2>
@@ -56,15 +71,21 @@
 <p><strong>Пользователям из Европейской экономической зоны, Великобритании и Швейцарии</strong> при первом запуске показывается окно согласия Google. Изменить решение можно в любой момент: «Настройки» → «Конфиденциальность» → «Настройки рекламы».</p>
 <p>Отключить персонализацию рекламы или сбросить рекламный идентификатор можно в настройках Android: «Настройки» → «Google» → «Реклама» (название пунктов может отличаться в зависимости от устройства).</p>
 
+<h2>Озвучка</h2>
+<p>Инструмент «Дыхание воина» произносит подсказки синтезатором речи, встроенным в Android. Произносятся только готовые фразы приложения (например, «Вдох», «Задержка»); ваши данные синтезатору не передаются. Если в настройках выбран голос, которому нужен интернет, фразы может озвучивать сервис речи вашего устройства (например, Google) по своим правилам.</p>
+
 <h2>Уведомления</h2>
 <p>Напоминания о заданиях и серии создаются и показываются самим устройством. Для них приложение просит разрешение на уведомления; содержимое напоминаний никуда не передаётся. Разрешение можно отозвать в настройках Android.</p>
 
 <h2>Разрешения</h2>
 <ul>
   <li><strong>Уведомления</strong> — для напоминаний.</li>
+  <li><strong>Точные будильники</strong> — чтобы напоминания приходили в назначенное время.</li>
+  <li><strong>Запуск после перезагрузки</strong> — чтобы запланированные напоминания срабатывали после перезагрузки устройства.</li>
+  <li><strong>Работа при выключенном экране</strong> — чтобы таймер Pomodoro и дыхательная сессия не прерывались.</li>
+  <li><strong>Вибрация</strong> — для тактильных сигналов в «Дыхании воина».</li>
   <li><strong>Доступ в интернет и к состоянию сети</strong> — только для загрузки рекламы.</li>
   <li><strong>Рекламный идентификатор</strong> — используется рекламным сервисом Google.</li>
-  <li><strong>Запуск после перезагрузки</strong> — чтобы запланированные напоминания срабатывали после перезагрузки устройства.</li>
 </ul>
 <p>Приложение не запрашивает доступ к камере, микрофону, контактам, точному местоположению и файлам.</p>
 
@@ -72,7 +93,7 @@
 <p>Приложение не предназначено для детей младше 13 лет, и мы сознательно не собираем данные детей.</p>
 
 <h2>Изменения политики</h2>
-<p>При изменении политики новая версия будет опубликована на этой странице с новой датой вступления в силу.</p>
+<p>При изменении политики новая версия будет опубликована на этой странице с новой датой вступления в силу. Переводы на другие языки приведены для удобства; при расхождении основной является русская версия.</p>
 
 <h2>Контакты</h2>
 <p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
@@ -82,7 +103,7 @@
 
 <section id="en" lang="en">
 <h1>RPG Planner (“RPG Ежедневник”) Privacy Policy</h1>
-<p class="meta">Effective 20 October 2026</p>
+<p class="meta">Effective 28 October 2026</p>
 
 <p>This policy explains what data the Android app “RPG Ежедневник” (the “app”) uses. Questions can be sent to <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a>.</p>
 
@@ -94,7 +115,8 @@
 </ul>
 
 <h2>Data stored on your device</h2>
-<p>Your progress — heroes, quests, completion history, habits, notes, Pomodoro timer statistics and settings — is kept in the app’s storage on your device. The developer has no access to it. It is deleted when you uninstall the app or reset your hero.</p>
+<p>Your progress — heroes, quests, completion history, habits, notes, Pomodoro and breathing session statistics, and settings — is kept in the app’s storage on your device. The developer has no access to it. It is deleted when you uninstall the app or reset your hero.</p>
+<p>Home screen widgets show your quests and habits; for that the app passes them to the widgets on the same device and nowhere else.</p>
 <p>If you use the “Save” backup feature, the app creates a file with your progress. You decide where to save or send it; the app does not transmit it anywhere.</p>
 
 <h2>Advertising (Google AdMob)</h2>
@@ -110,15 +132,21 @@
 <p><strong>Users in the European Economic Area, the UK and Switzerland</strong> are shown Google’s consent form on first launch. You can change your choice at any time in Settings → Privacy → Ad settings.</p>
 <p>You can opt out of ad personalisation or reset your advertising ID in Android settings: Settings → Google → Ads (names may vary by device).</p>
 
+<h2>Voice prompts</h2>
+<p>The “Warrior’s breath” tool speaks its prompts with Android’s built-in text-to-speech engine. Only the app’s own fixed phrases are spoken (such as “Breathe in”, “Hold”); none of your data is given to the engine. If you pick a voice that needs the internet, the phrases may be synthesised by your device’s speech service (for example, Google) under its own terms.</p>
+
 <h2>Notifications</h2>
 <p>Quest and streak reminders are scheduled and shown by your device. The app asks for notification permission for them; their content is not sent anywhere. You can revoke the permission in Android settings.</p>
 
 <h2>Permissions</h2>
 <ul>
   <li><strong>Notifications</strong> — for reminders.</li>
+  <li><strong>Exact alarms</strong> — so reminders arrive at the set time.</li>
+  <li><strong>Run at startup</strong> — so scheduled reminders still fire after the device restarts.</li>
+  <li><strong>Keep running with the screen off</strong> — so the Pomodoro timer and a breathing session are not interrupted.</li>
+  <li><strong>Vibration</strong> — for haptic cues in “Warrior’s breath”.</li>
   <li><strong>Internet and network state</strong> — only to load ads.</li>
   <li><strong>Advertising ID</strong> — used by Google’s ad service.</li>
-  <li><strong>Run at startup</strong> — so scheduled reminders still fire after the device restarts.</li>
 </ul>
 <p>The app does not request access to the camera, microphone, contacts, precise location or files.</p>
 
@@ -126,12 +154,512 @@
 <p>The app is not directed to children under 13, and we do not knowingly collect children’s data.</p>
 
 <h2>Changes</h2>
-<p>If this policy changes, the new version will be published on this page with a new effective date.</p>
+<p>If this policy changes, the new version will be published on this page with a new effective date. Translations are provided for convenience; if they differ, the Russian version prevails.</p>
 
 <h2>Contact</h2>
 <p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
 </section>
 
+<hr>
+
+<section id="de" lang="de">
+<h1>Datenschutzerklärung der App „RPG Ежедневник“</h1>
+<p class="meta">Gültig ab 28. Oktober 2026</p>
+
+<p>Diese Erklärung beschreibt, welche Daten die Android-App „RPG Ежедневник“ (die „App“) verwendet. Fragen dazu kannst du an <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a> senden.</p>
+
+<h2>Kurz gesagt</h2>
+<ul>
+  <li>Die App hat keine Konten, keinen eigenen Server und keine Analyse-Tools.</li>
+  <li>Alles, was du eingibst (Helden, Aufgaben, Gewohnheiten, Notizen, Verlauf, Einstellungen), wird nur auf deinem Gerät gespeichert und nie an uns gesendet.</li>
+  <li>Die App zeigt Werbung von Google AdMob. Der Werbedienst von Google erhält einige Gerätedaten — Details unten.</li>
+</ul>
+
+<h2>Auf dem Gerät gespeicherte Daten</h2>
+<p>Dein Fortschritt — Helden, Aufgaben, Erledigungsverlauf, Gewohnheiten, Notizen, Statistiken zu Pomodoro- und Atemsitzungen sowie Einstellungen — liegt im Speicher der App auf deinem Gerät. Der Entwickler hat keinen Zugriff darauf. Die Daten werden gelöscht, wenn du die App deinstallierst oder deinen Helden zurücksetzt.</p>
+<p>Widgets auf dem Startbildschirm zeigen deine Aufgaben und Gewohnheiten; dafür gibt die App sie an die Widgets auf demselben Gerät weiter und nirgendwohin sonst.</p>
+<p>Wenn du die Sicherungsfunktion „Speichern“ nutzt, erstellt die App eine Datei mit deinem Fortschritt. Wohin du sie speicherst oder sendest, entscheidest du; die App überträgt sie nirgendwohin.</p>
+
+<h2>Werbung (Google AdMob)</h2>
+<p>Die App zeigt Werbung über Google AdMob, darunter freiwillige Videos mit Belohnung im Spiel. Um Werbung auszuliefern, zu messen und Betrug zu verhindern, kann Google Folgendes erheben:</p>
+<ul>
+  <li>die Werbe-ID deines Geräts;</li>
+  <li>die IP-Adresse und den daraus abgeleiteten ungefähren Standort;</li>
+  <li>Geräteinformationen wie Modell, Betriebssystemversion und Sprache;</li>
+  <li>Interaktionen mit Werbung wie Einblendungen und Antippen;</li>
+  <li>Diagnosedaten zu Abstürzen und zur Leistung des Werbemoduls.</li>
+</ul>
+<p>Google verarbeitet diese Daten nach seinen eigenen Richtlinien: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Wie Google Informationen von Websites und Apps verwendet, die unsere Dienste nutzen</a>. Der Entwickler erhält und speichert sie nicht.</p>
+<p><strong>Nutzern im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz</strong> wird beim ersten Start das Einwilligungsfenster von Google angezeigt. Du kannst deine Wahl jederzeit ändern: Einstellungen → Datenschutz → Werbeeinstellungen.</p>
+<p>Personalisierte Werbung deaktivieren oder die Werbe-ID zurücksetzen kannst du in den Android-Einstellungen: Einstellungen → Google → Werbung (die Bezeichnungen können je nach Gerät abweichen).</p>
+
+<h2>Sprachausgabe</h2>
+<p>Das Werkzeug „Atem des Kriegers“ spricht seine Hinweise mit der in Android integrierten Sprachsynthese. Gesprochen werden nur feste Sätze der App (z. B. „Einatmen“, „Halten“); deine Daten werden nicht an die Sprachsynthese übergeben. Wählst du eine Stimme, die Internet benötigt, kann der Sprachdienst deines Geräts (z. B. Google) die Sätze nach seinen eigenen Bedingungen erzeugen.</p>
+
+<h2>Benachrichtigungen</h2>
+<p>Erinnerungen an Aufgaben und Serien werden von deinem Gerät geplant und angezeigt. Die App bittet dafür um die Berechtigung für Benachrichtigungen; deren Inhalt wird nirgendwohin gesendet. Du kannst die Berechtigung in den Android-Einstellungen widerrufen.</p>
+
+<h2>Berechtigungen</h2>
+<ul>
+  <li><strong>Benachrichtigungen</strong> — für Erinnerungen.</li>
+  <li><strong>Exakte Wecker</strong> — damit Erinnerungen zur eingestellten Zeit kommen.</li>
+  <li><strong>Start nach dem Neustart</strong> — damit geplante Erinnerungen auch nach einem Neustart des Geräts auslösen.</li>
+  <li><strong>Weiterlaufen bei ausgeschaltetem Bildschirm</strong> — damit der Pomodoro-Timer und eine Atemsitzung nicht unterbrochen werden.</li>
+  <li><strong>Vibration</strong> — für haptische Signale in „Atem des Kriegers“.</li>
+  <li><strong>Internet und Netzwerkstatus</strong> — nur zum Laden von Werbung.</li>
+  <li><strong>Werbe-ID</strong> — wird vom Werbedienst von Google verwendet.</li>
+</ul>
+<p>Die App fordert keinen Zugriff auf Kamera, Mikrofon, Kontakte, genauen Standort oder Dateien an.</p>
+
+<h2>Kinder</h2>
+<p>Die App richtet sich nicht an Kinder unter 13 Jahren, und wir erheben wissentlich keine Daten von Kindern.</p>
+
+<h2>Änderungen</h2>
+<p>Ändert sich diese Erklärung, wird die neue Fassung auf dieser Seite mit neuem Gültigkeitsdatum veröffentlicht. Übersetzungen dienen der Bequemlichkeit; bei Abweichungen gilt die russische Fassung.</p>
+
+<h2>Kontakt</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="es" lang="es">
+<h1>Política de privacidad de la app «RPG Ежедневник»</h1>
+<p class="meta">Vigente desde el 28 de octubre de 2026</p>
+
+<p>Esta política explica qué datos usa la app para Android «RPG Ежедневник» (la «app»). Puedes enviar tus preguntas a <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a>.</p>
+
+<h2>En resumen</h2>
+<ul>
+  <li>La app no tiene cuentas, ni servidor propio, ni analítica.</li>
+  <li>Todo lo que introduces (héroes, misiones, hábitos, notas, historial, ajustes) se guarda solo en tu dispositivo y nunca se nos envía.</li>
+  <li>La app muestra anuncios de Google AdMob. El servicio publicitario de Google recibe algunos datos del dispositivo; los detalles, abajo.</li>
+</ul>
+
+<h2>Datos guardados en el dispositivo</h2>
+<p>Tu progreso —héroes, misiones, historial de cumplimiento, hábitos, notas, estadísticas de Pomodoro y de las sesiones de respiración, y ajustes— se guarda en el almacenamiento de la app en tu dispositivo. El desarrollador no tiene acceso a él. Se borra al desinstalar la app o restablecer tu héroe.</p>
+<p>Los widgets de la pantalla de inicio muestran tus misiones y hábitos; para ello la app se los pasa a los widgets del mismo dispositivo y a ningún otro lugar.</p>
+<p>Si usas la función de copia de seguridad «Guardar», la app crea un archivo con tu progreso. Tú decides dónde guardarlo o enviarlo; la app no lo transmite a ninguna parte.</p>
+
+<h2>Publicidad (Google AdMob)</h2>
+<p>La app muestra anuncios mediante Google AdMob, incluidos vídeos opcionales con recompensa en el juego. Para mostrar y medir anuncios y prevenir el fraude, Google puede recopilar:</p>
+<ul>
+  <li>el identificador de publicidad de tu dispositivo;</li>
+  <li>la dirección IP y la ubicación aproximada que se deduce de ella;</li>
+  <li>información del dispositivo: modelo, versión del sistema e idioma;</li>
+  <li>interacciones con anuncios: impresiones y toques;</li>
+  <li>datos de diagnóstico sobre fallos y rendimiento del módulo de anuncios.</li>
+</ul>
+<p>Google trata estos datos según su propia política: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Cómo utiliza Google la información de sitios web o aplicaciones que utilizan sus servicios</a>. El desarrollador no los recibe ni los guarda.</p>
+<p>A los <strong>usuarios del Espacio Económico Europeo, el Reino Unido y Suiza</strong> se les muestra el formulario de consentimiento de Google en el primer inicio. Puedes cambiar tu decisión en cualquier momento: Ajustes → Privacidad → Ajustes de anuncios.</p>
+<p>Puedes desactivar la personalización de anuncios o restablecer el identificador de publicidad en los ajustes de Android: Ajustes → Google → Anuncios (los nombres pueden variar según el dispositivo).</p>
+
+<h2>Voz</h2>
+<p>La herramienta «Respiración del guerrero» dice sus indicaciones con el sintetizador de voz integrado en Android. Solo se pronuncian frases fijas de la app (por ejemplo, «Inspira», «Retén»); ninguno de tus datos se entrega al sintetizador. Si eliges una voz que necesita internet, las frases puede generarlas el servicio de voz de tu dispositivo (por ejemplo, Google) según sus propias condiciones.</p>
+
+<h2>Notificaciones</h2>
+<p>Los recordatorios de misiones y rachas los programa y muestra tu dispositivo. La app pide permiso de notificaciones para ellos; su contenido no se envía a ninguna parte. Puedes retirar el permiso en los ajustes de Android.</p>
+
+<h2>Permisos</h2>
+<ul>
+  <li><strong>Notificaciones</strong>: para los recordatorios.</li>
+  <li><strong>Alarmas exactas</strong>: para que los recordatorios lleguen a la hora fijada.</li>
+  <li><strong>Inicio tras reiniciar</strong>: para que los recordatorios programados sigan funcionando tras reiniciar el dispositivo.</li>
+  <li><strong>Funcionar con la pantalla apagada</strong>: para que el temporizador Pomodoro y la sesión de respiración no se interrumpan.</li>
+  <li><strong>Vibración</strong>: para las señales táctiles de «Respiración del guerrero».</li>
+  <li><strong>Internet y estado de la red</strong>: solo para cargar anuncios.</li>
+  <li><strong>Identificador de publicidad</strong>: lo usa el servicio publicitario de Google.</li>
+</ul>
+<p>La app no solicita acceso a la cámara, el micrófono, los contactos, la ubicación precisa ni los archivos.</p>
+
+<h2>Niños</h2>
+<p>La app no está dirigida a menores de 13 años y no recopilamos a sabiendas datos de menores.</p>
+
+<h2>Cambios</h2>
+<p>Si esta política cambia, la nueva versión se publicará en esta página con una nueva fecha de vigencia. Las traducciones se ofrecen por comodidad; en caso de diferencia, prevalece la versión rusa.</p>
+
+<h2>Contacto</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="fr" lang="fr">
+<h1>Politique de confidentialité de l’application « RPG Ежедневник »</h1>
+<p class="meta">En vigueur à partir du 28 octobre 2026</p>
+
+<p>Cette politique décrit les données utilisées par l’application Android « RPG Ежедневник » (l’« application »). Vos questions peuvent être envoyées à <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a>.</p>
+
+<h2>En bref</h2>
+<ul>
+  <li>L’application n’a ni comptes, ni serveur propre, ni outils d’analyse.</li>
+  <li>Tout ce que vous saisissez (héros, quêtes, habitudes, notes, historique, réglages) est stocké uniquement sur votre appareil et ne nous est jamais envoyé.</li>
+  <li>L’application affiche des publicités Google AdMob. Le service publicitaire de Google reçoit certaines données de l’appareil — détails ci-dessous.</li>
+</ul>
+
+<h2>Données stockées sur l’appareil</h2>
+<p>Votre progression — héros, quêtes, historique des réalisations, habitudes, notes, statistiques du minuteur Pomodoro et des séances de respiration, réglages — est conservée dans le stockage de l’application sur votre appareil. Le développeur n’y a pas accès. Elle est supprimée lorsque vous désinstallez l’application ou réinitialisez votre héros.</p>
+<p>Les widgets de l’écran d’accueil affichent vos quêtes et habitudes ; pour cela, l’application les transmet aux widgets du même appareil et nulle part ailleurs.</p>
+<p>Si vous utilisez la fonction de sauvegarde « Enregistrer », l’application crée un fichier contenant votre progression. Vous décidez où l’enregistrer ou l’envoyer ; l’application ne le transmet nulle part.</p>
+
+<h2>Publicité (Google AdMob)</h2>
+<p>L’application affiche des publicités via Google AdMob, y compris des vidéos facultatives récompensées dans le jeu. Pour diffuser et mesurer les publicités et prévenir la fraude, Google peut collecter :</p>
+<ul>
+  <li>l’identifiant publicitaire de votre appareil ;</li>
+  <li>l’adresse IP et la localisation approximative qui en découle ;</li>
+  <li>des informations sur l’appareil : modèle, version du système, langue ;</li>
+  <li>les interactions avec les publicités : affichages, appuis ;</li>
+  <li>des données de diagnostic sur les plantages et les performances du module publicitaire.</li>
+</ul>
+<p>Google traite ces données selon sa propre politique : <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Comment Google utilise les informations des sites ou applications qui utilisent ses services</a>. Le développeur ne les reçoit ni ne les conserve.</p>
+<p>Les <strong>utilisateurs de l’Espace économique européen, du Royaume-Uni et de la Suisse</strong> voient le formulaire de consentement de Google au premier lancement. Vous pouvez modifier votre choix à tout moment : Réglages → Confidentialité → Paramètres publicitaires.</p>
+<p>Vous pouvez désactiver la personnalisation des annonces ou réinitialiser l’identifiant publicitaire dans les paramètres d’Android : Paramètres → Google → Annonces (les intitulés peuvent varier selon l’appareil).</p>
+
+<h2>Voix</h2>
+<p>L’outil « Souffle du guerrier » prononce ses consignes avec la synthèse vocale intégrée à Android. Seules des phrases fixes de l’application sont prononcées (par exemple « Inspire », « Retiens ») ; aucune de vos données n’est transmise à la synthèse vocale. Si vous choisissez une voix nécessitant Internet, les phrases peuvent être générées par le service vocal de votre appareil (par exemple Google) selon ses propres conditions.</p>
+
+<h2>Notifications</h2>
+<p>Les rappels de quêtes et de séries sont programmés et affichés par votre appareil. L’application demande l’autorisation des notifications pour cela ; leur contenu n’est envoyé nulle part. Vous pouvez retirer l’autorisation dans les paramètres d’Android.</p>
+
+<h2>Autorisations</h2>
+<ul>
+  <li><strong>Notifications</strong> — pour les rappels.</li>
+  <li><strong>Alarmes exactes</strong> — pour que les rappels arrivent à l’heure prévue.</li>
+  <li><strong>Lancement au démarrage</strong> — pour que les rappels programmés fonctionnent après un redémarrage de l’appareil.</li>
+  <li><strong>Fonctionnement écran éteint</strong> — pour que le minuteur Pomodoro et une séance de respiration ne soient pas interrompus.</li>
+  <li><strong>Vibreur</strong> — pour les signaux tactiles de « Souffle du guerrier ».</li>
+  <li><strong>Internet et état du réseau</strong> — uniquement pour charger les publicités.</li>
+  <li><strong>Identifiant publicitaire</strong> — utilisé par le service publicitaire de Google.</li>
+</ul>
+<p>L’application ne demande pas l’accès à la caméra, au micro, aux contacts, à la localisation précise ni aux fichiers.</p>
+
+<h2>Enfants</h2>
+<p>L’application ne s’adresse pas aux enfants de moins de 13 ans et nous ne collectons pas sciemment de données d’enfants.</p>
+
+<h2>Modifications</h2>
+<p>En cas de modification, la nouvelle version sera publiée sur cette page avec une nouvelle date d’entrée en vigueur. Les traductions sont fournies pour plus de commodité ; en cas de divergence, la version russe prévaut.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="pt" lang="pt">
+<h1>Política de privacidade da app «RPG Ежедневник»</h1>
+<p class="meta">Em vigor desde 28 de outubro de 2026</p>
+
+<p>Esta política explica que dados a app para Android «RPG Ежедневник» (a «app») utiliza. As questões podem ser enviadas para <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a>.</p>
+
+<h2>Em resumo</h2>
+<ul>
+  <li>A app não tem contas, servidor próprio nem análise de utilização.</li>
+  <li>Tudo o que introduzes (heróis, missões, hábitos, notas, histórico, definições) fica guardado apenas no teu dispositivo e nunca nos é enviado.</li>
+  <li>A app mostra anúncios do Google AdMob. O serviço de publicidade da Google recebe alguns dados do dispositivo — detalhes abaixo.</li>
+</ul>
+
+<h2>Dados guardados no dispositivo</h2>
+<p>O teu progresso — heróis, missões, histórico de conclusão, hábitos, notas, estatísticas do Pomodoro e das sessões de respiração, e definições — fica no armazenamento da app no teu dispositivo. O programador não tem acesso a ele. É apagado quando desinstalas a app ou repões o teu herói.</p>
+<p>Os widgets do ecrã principal mostram as tuas missões e hábitos; para isso a app passa-os aos widgets no mesmo dispositivo e a mais nenhum lado.</p>
+<p>Se usares a função de cópia de segurança «Guardar», a app cria um ficheiro com o teu progresso. És tu quem decide onde o guardar ou para onde o enviar; a app não o transmite a lado nenhum.</p>
+
+<h2>Publicidade (Google AdMob)</h2>
+<p>A app mostra anúncios através do Google AdMob, incluindo vídeos opcionais com recompensa no jogo. Para apresentar e medir anúncios e prevenir fraude, a Google pode recolher:</p>
+<ul>
+  <li>o ID de publicidade do teu dispositivo;</li>
+  <li>o endereço IP e a localização aproximada que dele se deduz;</li>
+  <li>informações do dispositivo: modelo, versão do sistema e idioma;</li>
+  <li>interações com anúncios: impressões e toques;</li>
+  <li>dados de diagnóstico sobre falhas e desempenho do módulo de anúncios.</li>
+</ul>
+<p>A Google trata estes dados segundo a sua própria política: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Como a Google utiliza informações de sites ou apps que utilizam os nossos serviços</a>. O programador não os recebe nem os guarda.</p>
+<p>Aos <strong>utilizadores do Espaço Económico Europeu, do Reino Unido e da Suíça</strong> é mostrado o formulário de consentimento da Google no primeiro arranque. Podes alterar a tua escolha a qualquer momento: Definições → Privacidade → Definições de anúncios.</p>
+<p>Podes desativar a personalização de anúncios ou repor o ID de publicidade nas definições do Android: Definições → Google → Anúncios (os nomes podem variar consoante o dispositivo).</p>
+
+<h2>Voz</h2>
+<p>A ferramenta «Respiração do guerreiro» diz as indicações com o sintetizador de voz integrado no Android. Só são ditas frases fixas da app (por exemplo, «Inspira», «Segura»); nenhum dos teus dados é entregue ao sintetizador. Se escolheres uma voz que precisa de internet, as frases podem ser geradas pelo serviço de voz do teu dispositivo (por exemplo, Google) segundo as suas próprias condições.</p>
+
+<h2>Notificações</h2>
+<p>Os lembretes de missões e sequências são agendados e mostrados pelo teu dispositivo. A app pede permissão de notificações para eles; o seu conteúdo não é enviado a lado nenhum. Podes retirar a permissão nas definições do Android.</p>
+
+<h2>Permissões</h2>
+<ul>
+  <li><strong>Notificações</strong> — para os lembretes.</li>
+  <li><strong>Alarmes exatos</strong> — para que os lembretes cheguem à hora marcada.</li>
+  <li><strong>Iniciar após reiniciar</strong> — para que os lembretes agendados funcionem depois de reiniciar o dispositivo.</li>
+  <li><strong>Funcionar com o ecrã desligado</strong> — para que o temporizador Pomodoro e a sessão de respiração não sejam interrompidos.</li>
+  <li><strong>Vibração</strong> — para os sinais táteis da «Respiração do guerreiro».</li>
+  <li><strong>Internet e estado da rede</strong> — apenas para carregar anúncios.</li>
+  <li><strong>ID de publicidade</strong> — usado pelo serviço de publicidade da Google.</li>
+</ul>
+<p>A app não pede acesso à câmara, ao microfone, aos contactos, à localização precisa nem a ficheiros.</p>
+
+<h2>Crianças</h2>
+<p>A app não se destina a crianças com menos de 13 anos e não recolhemos conscientemente dados de crianças.</p>
+
+<h2>Alterações</h2>
+<p>Se esta política mudar, a nova versão será publicada nesta página com uma nova data de entrada em vigor. As traduções são fornecidas por conveniência; em caso de diferença, prevalece a versão russa.</p>
+
+<h2>Contacto</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="hi" lang="hi">
+<h1>«RPG Ежедневник» ऐप की गोपनीयता नीति</h1>
+<p class="meta">28 अक्टूबर 2026 से लागू</p>
+
+<p>यह नीति बताती है कि Android ऐप «RPG Ежедневник» («ऐप») कौन-सा डेटा इस्तेमाल करता है। प्रश्न <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a> पर भेजे जा सकते हैं।</p>
+
+<h2>संक्षेप में</h2>
+<ul>
+  <li>ऐप में न खाते हैं, न अपना सर्वर, न एनालिटिक्स।</li>
+  <li>आप जो कुछ भी दर्ज करते हैं (नायक, काम, आदतें, नोट्स, इतिहास, सेटिंग्स), वह केवल आपके डिवाइस पर रहता है और हमें कभी नहीं भेजा जाता।</li>
+  <li>ऐप Google AdMob के विज्ञापन दिखाता है। Google की विज्ञापन सेवा को डिवाइस का कुछ डेटा मिलता है — विवरण नीचे।</li>
+</ul>
+
+<h2>डिवाइस पर सहेजा गया डेटा</h2>
+<p>आपकी प्रगति — नायक, काम, पूरा करने का इतिहास, आदतें, नोट्स, पोमोडोरो और साँस सत्रों के आँकड़े, और सेटिंग्स — आपके डिवाइस पर ऐप के भंडारण में रहती है। डेवलपर की इस तक पहुँच नहीं है। ऐप हटाने या नायक को रीसेट करने पर यह मिट जाती है।</p>
+<p>होम स्क्रीन विजेट आपके काम और आदतें दिखाते हैं; इसके लिए ऐप उन्हें उसी डिवाइस के विजेट को देता है, कहीं और नहीं।</p>
+<p>यदि आप बैकअप की «सहेजें» सुविधा इस्तेमाल करते हैं, तो ऐप आपकी प्रगति की एक फ़ाइल बनाता है। उसे कहाँ सहेजना या भेजना है, यह आप तय करते हैं; ऐप उसे कहीं नहीं भेजता।</p>
+
+<h2>विज्ञापन (Google AdMob)</h2>
+<p>ऐप Google AdMob के ज़रिए विज्ञापन दिखाता है, जिनमें इनाम के लिए वैकल्पिक वीडियो भी शामिल हैं। विज्ञापन दिखाने, उन्हें मापने और धोखाधड़ी रोकने के लिए Google ये डेटा ले सकता है:</p>
+<ul>
+  <li>आपके डिवाइस की विज्ञापन आईडी;</li>
+  <li>IP पता और उससे निकाली गई अनुमानित लोकेशन;</li>
+  <li>डिवाइस की जानकारी: मॉडल, ऑपरेटिंग सिस्टम का संस्करण, भाषा;</li>
+  <li>विज्ञापनों के साथ इंटरैक्शन: दिखना, टैप;</li>
+  <li>विज्ञापन मॉड्यूल की खराबी और प्रदर्शन से जुड़ा निदान डेटा।</li>
+</ul>
+<p>Google इस डेटा को अपनी नीति के अनुसार संसाधित करता है: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Google अपनी सेवाएँ इस्तेमाल करने वाली साइटों या ऐप की जानकारी का उपयोग कैसे करता है</a>। डेवलपर यह डेटा न पाता है, न सहेजता है।</p>
+<p><strong>यूरोपीय आर्थिक क्षेत्र, ब्रिटेन और स्विट्ज़रलैंड के उपयोगकर्ताओं</strong> को पहली बार चलाने पर Google की सहमति विंडो दिखती है। आप अपना निर्णय कभी भी बदल सकते हैं: सेटिंग्स → गोपनीयता → विज्ञापन सेटिंग्स।</p>
+<p>विज्ञापन वैयक्तिकरण बंद करने या विज्ञापन आईडी रीसेट करने के लिए Android सेटिंग्स देखें: सेटिंग्स → Google → विज्ञापन (डिवाइस के अनुसार नाम अलग हो सकते हैं)।</p>
+
+<h2>आवाज़</h2>
+<p>«योद्धा की साँस» उपकरण अपने निर्देश Android में बने टेक्स्ट-टू-स्पीच इंजन से बोलता है। केवल ऐप के तय वाक्य बोले जाते हैं (जैसे «साँस लें», «रोकें»); आपका कोई डेटा इंजन को नहीं दिया जाता। यदि आप ऐसी आवाज़ चुनते हैं जिसे इंटरनेट चाहिए, तो वाक्य आपके डिवाइस की वाक् सेवा (जैसे Google) अपनी शर्तों के अनुसार बना सकती है।</p>
+
+<h2>सूचनाएँ</h2>
+<p>कामों और लगातार दिनों की याद दिलाने वाली सूचनाएँ आपका डिवाइस ही तय करता और दिखाता है। इसके लिए ऐप सूचनाओं की अनुमति माँगता है; उनकी सामग्री कहीं नहीं भेजी जाती। आप Android सेटिंग्स में अनुमति वापस ले सकते हैं।</p>
+
+<h2>अनुमतियाँ</h2>
+<ul>
+  <li><strong>सूचनाएँ</strong> — याद दिलाने के लिए।</li>
+  <li><strong>सटीक अलार्म</strong> — ताकि याद दिलाने वाली सूचनाएँ तय समय पर आएँ।</li>
+  <li><strong>रीस्टार्ट के बाद चालू होना</strong> — ताकि डिवाइस रीस्टार्ट होने के बाद भी तय सूचनाएँ आएँ।</li>
+  <li><strong>स्क्रीन बंद होने पर भी चलना</strong> — ताकि पोमोडोरो टाइमर और साँस सत्र न रुकें।</li>
+  <li><strong>कंपन</strong> — «योद्धा की साँस» में स्पर्श संकेतों के लिए।</li>
+  <li><strong>इंटरनेट और नेटवर्क स्थिति</strong> — केवल विज्ञापन लोड करने के लिए।</li>
+  <li><strong>विज्ञापन आईडी</strong> — Google की विज्ञापन सेवा इस्तेमाल करती है।</li>
+</ul>
+<p>ऐप कैमरा, माइक्रोफ़ोन, संपर्क, सटीक लोकेशन या फ़ाइलों तक पहुँच नहीं माँगता।</p>
+
+<h2>बच्चे</h2>
+<p>ऐप 13 साल से कम उम्र के बच्चों के लिए नहीं है, और हम जानबूझकर बच्चों का डेटा नहीं लेते।</p>
+
+<h2>बदलाव</h2>
+<p>नीति बदलने पर नया संस्करण नई लागू होने की तारीख के साथ इसी पेज पर प्रकाशित होगा। अनुवाद सुविधा के लिए दिए गए हैं; अंतर होने पर रूसी संस्करण मान्य होगा।</p>
+
+<h2>संपर्क</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="ja" lang="ja">
+<h1>アプリ「RPG Ежедневник」プライバシーポリシー</h1>
+<p class="meta">2026年10月28日施行</p>
+
+<p>本ポリシーは、Android アプリ「RPG Ежедневник」（以下「本アプリ」）が使用するデータについて説明します。ご質問は <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a> までお送りください。</p>
+
+<h2>概要</h2>
+<ul>
+  <li>本アプリにはアカウント、独自サーバー、アクセス解析はありません。</li>
+  <li>入力した内容（ヒーロー、クエスト、習慣、メモ、履歴、設定）はすべてお使いの端末内にのみ保存され、当方に送信されることはありません。</li>
+  <li>本アプリは Google AdMob の広告を表示します。Google の広告サービスは端末に関する一部のデータを受け取ります（詳細は下記）。</li>
+</ul>
+
+<h2>端末に保存されるデータ</h2>
+<p>進行状況（ヒーロー、クエスト、達成履歴、習慣、メモ、ポモドーロと呼吸セッションの統計、設定）は端末内のアプリの保存領域に保存されます。開発者はこれにアクセスできません。アプリのアンインストールまたはヒーローのリセットで削除されます。</p>
+<p>ホーム画面のウィジェットはクエストと習慣を表示します。そのため本アプリは同じ端末内のウィジェットにのみデータを渡し、端末の外には送りません。</p>
+<p>バックアップの「保存」機能を使うと、本アプリは進行状況のファイルを作成します。保存先や送信先はご自身で決めてください。本アプリがそのファイルをどこかへ送信することはありません。</p>
+
+<h2>広告（Google AdMob）</h2>
+<p>本アプリは Google AdMob を通じて広告を表示します。ゲーム内報酬のために任意で視聴できる動画も含まれます。広告の配信・測定および不正防止のため、Google は次の情報を取得する場合があります。</p>
+<ul>
+  <li>端末の広告 ID</li>
+  <li>IP アドレスおよびそこから推定されるおおよその位置情報</li>
+  <li>端末情報（機種、OS のバージョン、言語）</li>
+  <li>広告とのやり取り（表示、タップ）</li>
+  <li>広告モジュールのクラッシュやパフォーマンスに関する診断データ</li>
+</ul>
+<p>これらのデータは Google が独自のポリシーに従って処理します：<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Google のサービスを使用するサイトやアプリから収集した情報の Google による使用</a>。開発者がこれらのデータを受け取ったり保存したりすることはありません。</p>
+<p><strong>欧州経済領域、英国、スイスのユーザー</strong>には、初回起動時に Google の同意画面が表示されます。選択はいつでも変更できます：設定 → プライバシー → 広告の設定。</p>
+<p>広告のパーソナライズの無効化や広告 ID のリセットは Android の設定から行えます：設定 → Google → 広告（項目名は端末により異なる場合があります）。</p>
+
+<h2>音声ガイド</h2>
+<p>「戦士の呼吸」ツールは、Android に組み込まれた音声合成エンジンで案内を読み上げます。読み上げるのは本アプリの決まったフレーズ（「吸って」「止めて」など）のみで、あなたのデータがエンジンに渡されることはありません。インターネットが必要な音声を選んだ場合、フレーズは端末の音声サービス（Google など）がその規約に従って合成することがあります。</p>
+
+<h2>通知</h2>
+<p>クエストや連続記録のリマインダーは端末自身が予約・表示します。そのために本アプリは通知の許可を求めますが、通知の内容はどこにも送信されません。許可は Android の設定で取り消せます。</p>
+
+<h2>権限</h2>
+<ul>
+  <li><strong>通知</strong> — リマインダーのため。</li>
+  <li><strong>正確なアラーム</strong> — リマインダーを指定した時刻に届けるため。</li>
+  <li><strong>再起動後の起動</strong> — 端末の再起動後も予約したリマインダーが動作するため。</li>
+  <li><strong>画面オフ時の動作</strong> — ポモドーロタイマーや呼吸セッションが中断されないため。</li>
+  <li><strong>バイブレーション</strong> — 「戦士の呼吸」の触覚による合図のため。</li>
+  <li><strong>インターネットとネットワーク状態</strong> — 広告の読み込みのみに使用。</li>
+  <li><strong>広告 ID</strong> — Google の広告サービスが使用。</li>
+</ul>
+<p>本アプリは、カメラ、マイク、連絡先、正確な位置情報、ファイルへのアクセスを求めません。</p>
+
+<h2>子ども</h2>
+<p>本アプリは 13 歳未満の子どもを対象としておらず、子どものデータを故意に収集することはありません。</p>
+
+<h2>変更</h2>
+<p>本ポリシーを変更する場合は、新しい施行日とともに本ページで公開します。翻訳は便宜のためのものであり、相違がある場合はロシア語版が優先されます。</p>
+
+<h2>お問い合わせ</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="zh" lang="zh">
+<h1>“RPG Ежедневник”应用隐私政策</h1>
+<p class="meta">自 2026 年 10 月 28 日起生效</p>
+
+<p>本政策说明 Android 应用“RPG Ежедневник”（以下简称“本应用”）使用哪些数据。如有疑问，请发送至 <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a>。</p>
+
+<h2>概要</h2>
+<ul>
+  <li>本应用没有账号、没有自己的服务器，也没有数据分析。</li>
+  <li>你输入的所有内容（英雄、任务、习惯、笔记、历史、设置）仅保存在你的设备上，绝不会发送给我们。</li>
+  <li>本应用展示 Google AdMob 广告。Google 的广告服务会获取部分设备数据——详见下文。</li>
+</ul>
+
+<h2>保存在设备上的数据</h2>
+<p>你的进度——英雄、任务、完成历史、习惯、笔记、番茄钟和呼吸练习统计以及设置——保存在设备上的应用存储中。开发者无法访问。卸载应用或重置英雄时这些数据会被删除。</p>
+<p>主屏幕小组件会显示你的任务和习惯；为此，本应用只把它们传给同一设备上的小组件，不会传到其他任何地方。</p>
+<p>如果你使用备份中的“保存”功能，本应用会创建一个包含你进度的文件。保存到哪里或发送给谁由你决定；本应用不会把它传到任何地方。</p>
+
+<h2>广告（Google AdMob）</h2>
+<p>本应用通过 Google AdMob 展示广告，包括可选观看以获得游戏内奖励的视频。为投放和衡量广告并防止欺诈，Google 可能收集：</p>
+<ul>
+  <li>设备的广告 ID；</li>
+  <li>IP 地址及据此推断的大致位置；</li>
+  <li>设备信息：型号、系统版本、语言；</li>
+  <li>与广告的互动：展示、点按；</li>
+  <li>关于广告模块崩溃和性能的诊断数据。</li>
+</ul>
+<p>Google 按其自身政策处理这些数据：<a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Google 如何使用来自使用其服务的网站或应用的信息</a>。开发者不会接收或保存这些数据。</p>
+<p><strong>欧洲经济区、英国和瑞士的用户</strong>首次启动时会看到 Google 的同意窗口。你可以随时更改选择：设置 → 隐私 → 广告设置。</p>
+<p>你可以在 Android 设置中关闭广告个性化或重置广告 ID：设置 → Google → 广告（不同设备上的名称可能不同）。</p>
+
+<h2>语音</h2>
+<p>“战士呼吸”工具使用 Android 内置的语音合成引擎朗读提示。朗读的只是本应用固定的语句（如“吸气”“屏息”）；你的任何数据都不会交给该引擎。如果你选择需要联网的语音，这些语句可能由你设备上的语音服务（例如 Google）按其自身条款合成。</p>
+
+<h2>通知</h2>
+<p>任务和连续打卡提醒由你的设备自行安排和显示。本应用为此请求通知权限；提醒内容不会发送到任何地方。你可以在 Android 设置中撤销该权限。</p>
+
+<h2>权限</h2>
+<ul>
+  <li><strong>通知</strong>——用于提醒。</li>
+  <li><strong>精确闹钟</strong>——让提醒在设定时间到达。</li>
+  <li><strong>开机后启动</strong>——让已安排的提醒在设备重启后仍能触发。</li>
+  <li><strong>熄屏时继续运行</strong>——让番茄钟和呼吸练习不被中断。</li>
+  <li><strong>振动</strong>——用于“战士呼吸”中的触感提示。</li>
+  <li><strong>网络访问和网络状态</strong>——仅用于加载广告。</li>
+  <li><strong>广告 ID</strong>——由 Google 广告服务使用。</li>
+</ul>
+<p>本应用不会请求访问相机、麦克风、通讯录、精确位置或文件。</p>
+
+<h2>儿童</h2>
+<p>本应用不面向 13 岁以下儿童，我们不会故意收集儿童的数据。</p>
+
+<h2>变更</h2>
+<p>如本政策发生变更，新版本将连同新的生效日期发布在本页面。译文仅为方便阅读；如有出入，以俄语版本为准。</p>
+
+<h2>联系方式</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="ar" lang="ar" dir="rtl">
+<h1>سياسة الخصوصية لتطبيق «RPG Ежедневник»</h1>
+<p class="meta">سارية اعتبارًا من 28 أكتوبر 2026</p>
+
+<p>توضّح هذه السياسة البيانات التي يستخدمها تطبيق Android «RPG Ежедневник» (المشار إليه بـ«التطبيق»). يمكن إرسال الأسئلة إلى <a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a>.</p>
+
+<h2>باختصار</h2>
+<ul>
+  <li>لا يوجد في التطبيق حسابات ولا خادم خاص ولا أدوات تحليل.</li>
+  <li>كل ما تُدخله (الأبطال، المهام، العادات، الملاحظات، السجل، الإعدادات) يُحفظ على جهازك فقط ولا يُرسل إلينا أبدًا.</li>
+  <li>يعرض التطبيق إعلانات Google AdMob. تتلقى خدمة إعلانات Google بعض بيانات الجهاز — التفاصيل أدناه.</li>
+</ul>
+
+<h2>البيانات المحفوظة على الجهاز</h2>
+<p>يُحفظ تقدّمك — الأبطال، المهام، سجل الإنجاز، العادات، الملاحظات، إحصاءات مؤقت بومودورو وجلسات التنفس، والإعدادات — في مساحة تخزين التطبيق على جهازك. لا يملك المطوّر وصولًا إليه. يُحذف عند إلغاء تثبيت التطبيق أو إعادة ضبط البطل.</p>
+<p>تعرض أدوات الشاشة الرئيسية مهامك وعاداتك؛ ولهذا يمرّرها التطبيق إلى الأدوات على الجهاز نفسه فقط ولا يرسلها إلى أي مكان آخر.</p>
+<p>إذا استخدمت ميزة النسخ الاحتياطي «حفظ»، ينشئ التطبيق ملفًا بتقدّمك. أنت من يقرر أين تحفظه أو إلى أين ترسله؛ ولا يرسله التطبيق إلى أي مكان.</p>
+
+<h2>الإعلانات (Google AdMob)</h2>
+<p>يعرض التطبيق الإعلانات عبر Google AdMob، بما في ذلك مقاطع فيديو اختيارية مقابل مكافأة داخل اللعبة. لعرض الإعلانات وقياسها ومنع الاحتيال، قد تجمع Google:</p>
+<ul>
+  <li>المعرّف الإعلاني لجهازك؛</li>
+  <li>عنوان IP والموقع التقريبي المستنتج منه؛</li>
+  <li>معلومات الجهاز: الطراز، إصدار نظام التشغيل، اللغة؛</li>
+  <li>التفاعلات مع الإعلانات: مرات الظهور والنقرات؛</li>
+  <li>بيانات تشخيصية عن أعطال وحدة الإعلانات وأدائها.</li>
+</ul>
+<p>تعالج Google هذه البيانات وفق سياستها الخاصة: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">كيفية استخدام Google للمعلومات من المواقع أو التطبيقات التي تستخدم خدماتها</a>. لا يتلقى المطوّر هذه البيانات ولا يحفظها.</p>
+<p>يُعرض على <strong>المستخدمين في المنطقة الاقتصادية الأوروبية والمملكة المتحدة وسويسرا</strong> نموذج موافقة Google عند التشغيل الأول. يمكنك تغيير اختيارك في أي وقت: الإعدادات ← الخصوصية ← إعدادات الإعلانات.</p>
+<p>يمكنك إيقاف تخصيص الإعلانات أو إعادة ضبط المعرّف الإعلاني من إعدادات Android: الإعدادات ← Google ← الإعلانات (قد تختلف الأسماء حسب الجهاز).</p>
+
+<h2>الصوت</h2>
+<p>تنطق أداة «تنفس المحارب» تعليماتها بمحرّك تحويل النص إلى كلام المدمج في Android. لا تُنطق إلا عبارات ثابتة من التطبيق (مثل «شهيق»، «احبس»)، ولا تُعطى أي من بياناتك للمحرّك. إذا اخترت صوتًا يحتاج إلى الإنترنت، فقد تُولِّد خدمة الكلام في جهازك (مثل Google) العبارات وفق شروطها الخاصة.</p>
+
+<h2>الإشعارات</h2>
+<p>يجدول جهازك تذكيرات المهام والسلاسل ويعرضها بنفسه. يطلب التطبيق لذلك إذن الإشعارات، ولا يُرسل محتواها إلى أي مكان. يمكنك سحب الإذن من إعدادات Android.</p>
+
+<h2>الأذونات</h2>
+<ul>
+  <li><strong>الإشعارات</strong> — للتذكيرات.</li>
+  <li><strong>المنبّهات الدقيقة</strong> — لتصل التذكيرات في الوقت المحدد.</li>
+  <li><strong>التشغيل بعد إعادة التشغيل</strong> — لتعمل التذكيرات المجدولة بعد إعادة تشغيل الجهاز.</li>
+  <li><strong>العمل والشاشة مطفأة</strong> — كي لا ينقطع مؤقت بومودورو وجلسة التنفس.</li>
+  <li><strong>الاهتزاز</strong> — للإشارات اللمسية في «تنفس المحارب».</li>
+  <li><strong>الإنترنت وحالة الشبكة</strong> — لتحميل الإعلانات فقط.</li>
+  <li><strong>المعرّف الإعلاني</strong> — تستخدمه خدمة إعلانات Google.</li>
+</ul>
+<p>لا يطلب التطبيق الوصول إلى الكاميرا أو الميكروفون أو جهات الاتصال أو الموقع الدقيق أو الملفات.</p>
+
+<h2>الأطفال</h2>
+<p>التطبيق غير موجّه للأطفال دون 13 عامًا، ولا نجمع بيانات الأطفال عن علم.</p>
+
+<h2>التغييرات</h2>
+<p>إذا تغيّرت هذه السياسة، تُنشر النسخة الجديدة في هذه الصفحة مع تاريخ سريان جديد. الترجمات مقدّمة للتيسير؛ وعند الاختلاف تسري النسخة الروسية.</p>
+
+<h2>التواصل</h2>
+<p><a href="mailto:stasssstad@gmail.com">stasssstad@gmail.com</a></p>
+</section>
+
 </main>
+<script>
+  // Opened without a #language: jump to the reader's language if the policy has it.
+  (function () {
+    if (location.hash) return;
+    var langs = (navigator.languages || [navigator.language || ""]).map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
+    for (var i = 0; i < langs.length; i++) {
+      if (langs[i] === "ru") return; // Russian is on top already
+      var el = document.getElementById(langs[i]);
+      if (el && el.tagName === "SECTION") { el.scrollIntoView(); return; }
+    }
+  })();
+</script>
 </body>
 </html>
